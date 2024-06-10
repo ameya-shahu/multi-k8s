@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: ameyashahu-tech-tls
+spec:
+  secretName: test-ameyashahu-tech
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: test.ameyashahu.tech
+  dnsNames:
+    - test.ameyashahu.tech
